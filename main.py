@@ -2,16 +2,16 @@ from turtle import Turtle, Screen
 from Paddle import Paddle
 
 screen = Screen()
-screen.tracer(0)
 screen.bgcolor("black")
 screen.setup(width=800, height=600)
 screen.title("Pong Game")
+screen.tracer(0)
 
 paddle = Paddle()
 
 screen.listen()
-screen.onkey(paddle.up, 'Up')
-screen.onkey(paddle.down, 'Down')
+screen.onkeypress(paddle.up, 'Up')
+screen.onkeypress(paddle.down, 'Down')
 
 game_is_on = True
 

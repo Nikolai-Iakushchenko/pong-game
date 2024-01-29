@@ -7,15 +7,14 @@ class Paddle(Turtle):
         super().__init__()
         self.color("white")
         self.shape("square")
-        self.shapesize(1,5)
-        self.left(90)
+        self.shapesize(5,1)
         self.penup()
         self.goto(350, 0)
 
     def up(self):
-        self.setheading(90)
-        self.fd(20)
+        new_y = self.ycor() + 20
+        self.goto(self.xcor(), new_y)
 
     def down(self):
-        self.setheading(270)
-        self.fd(20)
+        new_y = self.ycor() - 20
+        self.goto(self.xcor(), new_y)
