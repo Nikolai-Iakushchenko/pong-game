@@ -12,5 +12,8 @@ class Ball(Turtle):
         self.lt(20)
 
     def move(self):
-        if not(self.xcor() > 380 or self.xcor() < - 380 or self.ycor() > 280 or self.ycor() < -280):
-            self.fd(1)
+        # if not(self.xcor() > 380 or self.xcor() < - 380 or self.ycor() > 280 or self.ycor() < -280):
+        #     self.fd(1)
+        nex_x = self.xcor() + 10
+        nex_y = self.ycor() + 10
+        self.goto(nex_x, nex_y)
